@@ -251,7 +251,6 @@ bool getNewBoard() {
 			valid = true;
 		}
 	}
-	//int player = 1;
 	setBoard(player, numShips, xseeds, yseeds, dseeds);
 	for (int i = 0; i < dim; i++) {
 		for (int j = 0; j < dim; j++) {
@@ -292,10 +291,8 @@ void makeMove(int dim, int n[20][20]) {
 		for (int j = 0; j < dim; j++) {
 			if (n[i][j] != 0) {
 				w[i][j] = 0;
-				//cout << "you got here " << i << j << endl;
 			}
 			else {
-				//cout << "u be here" << endl;
 				if (i > 0) {
 					if (n[i - 1][j] == 0) {
 						w[i][j]++;
@@ -366,9 +363,8 @@ void main(int argc, char* argv[])
 	else {
 		player = 2;
 	}
-	if (true){//strcmp(argv[2], "1") == 0) {
+	if (strcmp(argv[2], "1") == 0) {
 		getNewBoard();
-		cout << "here";
 	}
 	else {
 		int n[20][20];
@@ -378,7 +374,7 @@ void main(int argc, char* argv[])
 			}
 		}
 
-		dim = getGameBoard(n);// cout << "didn't work?" << endl;
+		dim = getGameBoard(n);
 		for (int i = 0; i < 20; i++) {
 			for (int j = 0; j < 20; j++) {
 				cout << n[i][j];
