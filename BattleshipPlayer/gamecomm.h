@@ -64,7 +64,7 @@ bool putMove(int player, int iMoveRow, int iMoveCol)
 		return false;
 	if(iMoveRow>=ROWS || iMoveRow<0)
 		return false;
-	out << iMoveRow << " " << iMoveCol << endl;
+	out << "x" <<iMoveRow << "y" << iMoveCol << endl;
 	out.close();
 	return true;
 }
