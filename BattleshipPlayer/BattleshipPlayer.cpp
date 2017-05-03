@@ -254,9 +254,9 @@ bool getNewBoard() {
 	setBoard(player, numShips, xseeds, yseeds, dseeds);
 	for (int i = 0; i < dim; i++) {
 		for (int j = 0; j < dim; j++) {
-			cout << n[i][j];
+			//cout << n[i][j];
 		}
-		cout << endl;
+		//cout << endl;
 	}
 	in.close();
 	return true;
@@ -270,9 +270,9 @@ int getMax(int dim, int w[20][20]) {
 			if (w[i][j] > max) {
 				max = w[i][j];
 			}
-			cout << w[i][j];
+			//cout << w[i][j];
 		}
-		cout << endl;
+		//cout << endl;
 	}
 	return max;
 }
@@ -329,7 +329,7 @@ void makeMove(int dim, int n[20][20]) {
 		}
 	}
 	max = getMax(dim, w);
-	cout << "I be here "  << max << endl;
+	//cout << "I be here "  << max << endl;
 	vector<int> v1;
 	vector<int> v2;
 	int count = 0;
@@ -346,11 +346,11 @@ void makeMove(int dim, int n[20][20]) {
 			}
 		}
 	}
-	cout << "I be here too "  << count << endl;
+	//cout << "I be here too "  << count << endl;
 	randomSeed = rand() % count;
 	row = v1[randomSeed];
 	col = v2[randomSeed];
-	cout << row << col << endl;
+	//cout << row << col << endl;
 	putMove(player, row, col);
 }
 
@@ -377,12 +377,12 @@ void main(int argc, char* argv[])
 		dim = getGameBoard(n);
 		for (int i = 0; i < 20; i++) {
 			for (int j = 0; j < 20; j++) {
-				cout << n[i][j];
+				//cout << n[i][j];
 			}
-			cout << endl;
+			//cout << endl;
 		}
 		makeMove(dim, n);
 	}
-	system("pause");
+	//system("pause");
 
 }

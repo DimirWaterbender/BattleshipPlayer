@@ -57,7 +57,7 @@ bool putMove(int player, int iMoveRow, int iMoveCol)
 	string filename = "player";
 	filename = filename.append(n.c_str());
 	filename.append("move.txt");
-	cout << filename << endl;
+	//cout << filename << endl;
 	ofstream out(filename);
 
 	if(iMoveCol>=COLS || iMoveCol<0)
@@ -77,7 +77,7 @@ bool setBoard(int player,int dim, vector<int> xseeds, vector<int> yseeds, vector
 	string filename = "player";
 	filename = filename.append(n.c_str());// +"ships.txt";
 	filename.append("ships.txt");
-	cout << filename << endl;
+	//cout << filename << endl;
 	ofstream out(filename);
 
 	for (int i = 0; i < dim; i++) {
